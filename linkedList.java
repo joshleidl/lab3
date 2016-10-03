@@ -7,15 +7,15 @@ public class linkedList
 	
 	public linkedList()
 	{
-		this.head = null;
-		this.length = 0;
+		head = null;
+		length = 0;
 	}
 	
 	public void addElement(listElement le)
 	{
 		if (this.head == null)
 		{
-			this.head = le;
+			head = le;
 		}
 		else
 		{
@@ -29,7 +29,7 @@ public class linkedList
 			addTo.setNext(le);
 		}
 		
-		this.length++;
+		length++;
 	}
 	
 	public listElement getElement(int index)
@@ -57,18 +57,48 @@ public class linkedList
 		{
 			return false;
 		}
+		else if(index == 0)
+		{
+			//Case we want to delete head
+			//Java does not require memory release and will clean up my garbage
+			head = head.getNext();
+			
+			length--;
+		}
 		else
 		{
-			listElement toReturn = head;
+			listElement beforeDelete = head;
 			
-			for (int i = 0; i < index; i++)
+			for (int i = 0; i < index - 1; i++)
 			{
-				toReturn = toReturn.getNext();
+				beforeDelete = beforeDelete.getNext();
 			}
+			
+			beforeDelete.setNext(beforeDelete.getNext().getNext());
+			
+			length--;
 			
 			return true;
 		}
 	}
+	
+	public void printList()
+	{
+		listElement toPrint = head;
+		
+		if (length == 0)
+		{
+			System.out.println("List is empty!");
+		}
+		else
+		{
+			for(int i = 0; i < length; i++)
+			{
+				System.out.println("Index" + i + ": " + toPrint.getData());
+			}
+		}
+	}
+	
 	
 	//public addElement()
 
