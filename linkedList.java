@@ -1,4 +1,8 @@
-package linkedList;
+package list;
+
+import element.listElement;
+
+
 
 public class linkedList
 {
@@ -77,9 +81,9 @@ public class linkedList
 			beforeDelete.setNext(beforeDelete.getNext().getNext());
 			
 			length--;
-			
-			return true;
 		}
+		
+		return true;
 	}
 	
 	public void printList()
