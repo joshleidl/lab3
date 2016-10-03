@@ -1,6 +1,8 @@
 import linkedList;
 
+import java.util.*;
 import java.util.Scanner;
+import java.io.IOException;
 
 public class useList
 {
@@ -25,17 +27,19 @@ public class useList
 			System.out.println("4: Print the whole list");
 			System.out.println("5: Exit the program");
 			
-			input = in.getNext();
+			input = in.next();
 			
 			switch(input.compareTo("0"))
 			{
 				case 1:
 					System.out.print("Please enter the data to store: ");
-					data = in.getNextInt();
+					data = in.nextInt();
 					
-					toAdd = new listElement();
+					toAdd = new listElement(data);
 					
-					mainList.addElement()
+					mainList.addElement(toAdd);
+					break;
+					
 			}
 		}
 	}
