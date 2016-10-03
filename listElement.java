@@ -1,3 +1,5 @@
+package linkedList;
+
 public class listElement
 {
 	private int data;
@@ -6,6 +8,22 @@ public class listElement
 	public listElement()
 	{
 		this.data = 0;
-		this.listElement = null;
+		this.next = null;
+	}
+	
+	public int getData()
+	{
+		return this.data;
+	}
+	
+	public void setNext(listElement le)
+	{
+		this.next = le;
+	}
+	
+	public listElement getNext()
+	{
+		return this.next;
 	}
 }
+
