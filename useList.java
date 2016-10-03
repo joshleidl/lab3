@@ -9,6 +9,8 @@ public class useList
 		Scanner in = new Scanner(System.in);
 		
 		String input = " ";
+		int data;
+		listElement toAdd;
 		
 		linkedList mainList = new linkedList();
 		
@@ -27,7 +29,13 @@ public class useList
 			
 			switch(input.compareTo("0"))
 			{
-				
+				case 1:
+					System.out.print("Please enter the data to store: ");
+					data = in.getNextInt();
+					
+					toAdd = new listElement();
+					
+					mainList.addElement()
 			}
 		}
 	}

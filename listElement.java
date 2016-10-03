@@ -11,6 +11,12 @@ public class listElement
 		this.next = null;
 	}
 	
+	public listElement(int d)
+	{
+		this.data = d;
+		this.next = null;
+	}
+	
 	public int getData()
 	{
 		return this.data;
