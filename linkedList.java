@@ -98,8 +98,4 @@ public class linkedList
 			}
 		}
 	}
-	
-	
-	//public addElement()
-
 }
