@@ -11,9 +11,9 @@ public class useList
 	{
 		Scanner in = new Scanner(System.in);
 		
-		int input;
+		int input= 0;
 		int data;
-		listElement toAdd;
+		listElement toAdd, grabbedElement;
 		
 		linkedList mainList = new linkedList();
 		
@@ -43,6 +43,21 @@ public class useList
 					break;
 				
 				case 2:
+					System.out.print("Please enter the index of the element (index starts at 0): ");
+					input = in.nextInt();
+					
+					grabbedElement = mainList.getElement(input);
+					
+					if(grabbedElement == null)
+						System.out.println("Invalid index!");
+					else
+						System.out.println("Value stored: " + grabbedElement.getData() + "\n");
+					
+					break;
+					
+				case 3:
+					System.out.print("Please enter the index of the element (index starts at 0): ");
+					input 
 			}
 		}
 	}
