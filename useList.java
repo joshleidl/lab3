@@ -1,5 +1,5 @@
-import com.list.listElement;
-import com.list.linkedList;
+import list.listElement;
+import list.linkedList;
 
 import java.util.*;
 import java.util.Scanner;
