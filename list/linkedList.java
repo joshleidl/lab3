@@ -94,7 +94,7 @@ public class linkedList
 		{
 			for(int i = 0; i < length; i++)
 			{
-				System.out.println("Index" + i + ": " + toPrint.getData());
+				System.out.println("Index " + i + ": " + toPrint.getData());
 			}
 		}
 	}

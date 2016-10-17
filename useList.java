@@ -57,7 +57,27 @@ public class useList
 					
 				case 3:
 					System.out.print("Please enter the index of the element (index starts at 0): ");
-					input 
+					input = in.nextInt();
+					
+					if(mainList.deleteElement(input))
+						System.out.println("Success!\n");
+					else
+						System.out.println("Deletion failed\n");
+					
+					break;
+					
+				case 4:
+					System.out.println("");
+					
+					mainList.printList();
+					
+					break;
+				
+				case 5:
+					break;
+					
+				default:
+					System.out.println("Invalid selection!");
 			}
 		}
 	}
