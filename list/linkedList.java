@@ -15,6 +15,7 @@ public class linkedList
 	
 	public void addElement(int data)
 	{
+		listElement temp = new listElement();
 		
 		if (this.head == null)
 		{	
@@ -26,7 +27,9 @@ public class linkedList
 		else
 		{
 			tail.setNext(new listElement(data));
+			temp = tail;
 			tail = tail.getNext();
+			tail.setPrev(temp);
 		}
 		
 		length++;
@@ -75,6 +78,7 @@ public class linkedList
 			}
 			
 			beforeDelete.setNext(beforeDelete.getNext().getNext());
+			beforeDelete.getNext().setPrev(beforeDelete);
 			
 			length--;
 		}
