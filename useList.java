@@ -37,9 +37,7 @@ public class useList
 					System.out.print("Please enter the data to store: ");
 					data = in.nextInt();
 					
-					toAdd = new listElement(data);
-					
-					mainList.addElement(toAdd);
+					mainList.addElement(data);
 					break;
 				
 				case 2:

@@ -11,6 +11,12 @@ public class listElement
 		this.next = null;
 	}
 	
+	public void copy(listElement copyFrom)
+	{
+		this.data = copyFrom.getData();
+		this.next = copyFrom.getNext();
+	}
+	
 	public listElement(int d)
 	{
 		this.data = d;

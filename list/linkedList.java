@@ -3,30 +3,30 @@ package list;
 public class linkedList
 {
 	private listElement head;
+	private listElement tail;
 	private int length;
 	
 	public linkedList()
 	{
 		head = null;
+		tail = null;
 		length = 0;
 	}
 	
-	public void addElement(listElement le)
+	public void addElement(int data)
 	{
+		
 		if (this.head == null)
-		{
-			head = le;
+		{	
+			listElement toAdd = new listElement(data);
+	
+			this.head = toAdd;
+			this.tail = toAdd;
 		}
 		else
 		{
-			listElement addTo = new listElement();
-			
-			for (listElement iterator = head; iterator.getNext() != null; iterator = iterator.getNext())
-			{
-				addTo = iterator;
-			}
-			
-			addTo.setNext(le);
+			tail.setNext(new listElement(data));
+			tail = tail.getNext();
 		}
 		
 		length++;
@@ -85,6 +85,7 @@ public class linkedList
 	public void printList()
 	{
 		listElement toPrint = head;
+		int index = 0;
 		
 		if (length == 0)
 		{
@@ -92,9 +93,10 @@ public class linkedList
 		}
 		else
 		{
-			for(int i = 0; i < length; i++)
+			for(; toPrint != null; toPrint = toPrint.getNext())
 			{
-				System.out.println("Index " + i + ": " + toPrint.getData());
+				System.out.println("Index " + index + ": " + toPrint.getData());
+				index++;
 			}
 		}
 	}
