@@ -98,6 +98,8 @@ public class linkedList
 				System.out.println("Index " + index + ": " + toPrint.getData());
 				index++;
 			}
+			
+			System.out.println("");
 		}
 	}
 }
