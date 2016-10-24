@@ -29,7 +29,6 @@ public class linkedList
 			tail.setNext(new listElement(data));
 			temp = tail;
 			tail = tail.getNext();
-			tail.setPrev(temp);
 		}
 		
 		length++;
@@ -78,7 +77,6 @@ public class linkedList
 			}
 			
 			beforeDelete.setNext(beforeDelete.getNext().getNext());
-			beforeDelete.getNext().setPrev(beforeDelete);
 			
 			length--;
 		}
